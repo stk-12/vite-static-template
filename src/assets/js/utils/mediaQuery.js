@@ -1,19 +1,13 @@
 export class MediaQuery {
   constructor(){
     this.mql = window.matchMedia('(max-width: 768px)');
+    this.isPC = !this.mql.matches;
 
-    this.isPC = null;
-
-    this._checkBreakPoint(this.mql);
     this._addEvent();
   }
 
-  _checkBreakPoint(mql) {
-    if(mql.matches) {
-      this.isPC = false;
-    } else {
-      this.isPC = true;
-    }
+  _checkBreakPoint() {
+    this.isPC = !this.mql.matches;
   }
 
   _addEvent() {
