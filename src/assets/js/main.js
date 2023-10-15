@@ -1,4 +1,5 @@
-import { MediaQuery } from "./utils/mediaQuery.js";
+import { mediaQuery } from "./utils/mediaQuery.js";
 
-const MEDIA_QUERY = new MediaQuery();
-console.log(MEDIA_QUERY.isPC);
+if(mediaQuery.isPC) {
+  console.log('is PC');
+}
