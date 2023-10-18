@@ -61,6 +61,7 @@ for (let i = 0; i < files.length; i++) {
 export default defineConfig({
   base: "./",
   root: "./src",
+  publicDir: '../public/',
   build: {
 		outDir: "../dist",
     rollupOptions: {
