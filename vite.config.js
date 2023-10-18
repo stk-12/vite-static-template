@@ -24,7 +24,7 @@ function readDirectory(dirPath) {
     const itemPath = path.join(dirPath, item);
 
     if (fs.statSync(itemPath).isDirectory()) {
-      if (item === 'components') {
+      if (item === 'include') {
         continue;
       }
 
@@ -92,7 +92,7 @@ export default defineConfig({
   },
   plugins: [
     handlebars({
-      partialDirectory: resolve(__dirname, './src/components'),
+      partialDirectory: resolve(__dirname, './src/assets/include'),
       //各ページ情報の読み込み
       // context(pagePath) {
       //   return pageData[pagePath];
